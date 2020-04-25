@@ -22,7 +22,7 @@ a:hover {
   margin-top: 2px;
 }
 
-.title, .addDancerButton, .lineup, .clear, .boardLineUp{
+.title, .addDancerButton, .lineup, .clear, .boardLineUp, .pair{
   padding:9px 9px;
   float:right;
 }
@@ -144,7 +144,8 @@ a:hover {
 
 .fa-chess-pawn {
   animation-duration: 0.5s;
-  color: rgb(252, 30, 30);
+  color: rgb(180, 7, 38);
+  -webkit-text-stroke: 0.35px rgb(53, 51, 51);
 }
 
 .bounce {

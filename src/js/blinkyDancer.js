@@ -5,7 +5,6 @@ var BlinkyDancer = function(top, left, timeBetweenSteps) {
   this.$inner.addClass('blinker');
 
   this.$node.append(this.$inner);
-  console.log('inside blinker -- node + inner', this.$node, this.$inner);
   // this.$inner.on('click', this.blink.bind(this));
   // this.step();
 };

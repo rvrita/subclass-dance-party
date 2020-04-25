@@ -19,7 +19,7 @@ a:hover {
   color: lightblue;
 }
 
-.title, .addDancerButton, .addDancerButton:hover, .lineup, .boardLineUp, .clear {
+.title, .addDancerButton, .addDancerButton:hover, .lineup, .boardLineUp, .clear, .pair {
   float:right;
   border-radius: 6px;
   background-color: #555;
