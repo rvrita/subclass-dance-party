@@ -1,0 +1,245 @@
+body, html {
+  height:100%;
+}
+
+body {
+  margin: 0px;
+  background-color: #444;
+  font-size: 16px;
+  font-family: "Bookman Old Style", Georgia, serif;
+}
+
+body, a {
+  color: lightblue;
+  text-decoration: none;
+}
+
+a:hover {
+  padding: 6px;
+  color: lightblue;
+}
+
+.title, .addDancerButton, .addDancerButton:hover, .lineup, .boardLineUp, .clear {
+  float:right;
+  border-radius: 6px;
+  background-color: #555;
+  margin-top: 6px;
+  margin-left: 20px;
+  padding: 6px;
+  color: lightblue;
+  border: none;
+}
+
+.topbar {
+  height:45px;
+  background-color: #555;
+}
+
+.topbar a:hover {
+  background-color: #777;
+}
+
+.title {
+  background-color: #777;
+  border-radius: 6px;
+}
+
+em {
+  font-style: normal;
+}
+
+.container {
+  margin-top: 35px;
+}
+
+.blinky, .flash {
+  display: none;
+}
+
+#btn-swap-classic, #btn-swap-wooden {
+  font-size: 18px;
+  font-family: "Bookman Old Style", Georgia, serif;
+  border-radius: 6px;
+  background-color: #555;
+  margin-top: 6px;
+  margin-left: 20px;
+  padding: 7px;
+  color: lightblue;
+  border: none;
+}
+
+#btn-swap-classic:active, #btn-swap-wooden:active {
+  border: 0;
+}
+
+#btn-swap-classic:hover, #btn-swap-wooden:hover {
+  border: none;
+  border-radius: 6px;
+  background-color: #777;
+  margin-top: 6px;
+  margin-left: 20px;
+  padding: 7px;
+  color: lightblue;
+}
+
+.dancer {
+  position:absolute;
+}
+
+.black {
+  background-color:#333333;
+  width:30px;
+  height:30px;
+  opacity: 0.9;
+}
+
+.white {
+  background-color:white;
+  width:30px;
+  height:30px;
+  opacity: 0.9;
+}
+
+.fas {
+  font-size:30px;
+  width:30px;
+  height:30px;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  transition: top 100ms, left 100ms;
+}
+
+.chessboard {
+  position: relative;
+  width: 480px;
+  margin: 0 auto;
+}
+
+.chessboard table {
+  border-spacing: 0;
+}
+
+.chessboard td {
+  padding: 0;
+}
+
+.fa-chess-pawn {
+  animation-duration: 0.5s;
+  color: lightseagreen;
+}
+
+.bounce {
+  animation-name: bounce;
+}
+@keyframes bounce {
+  50% { transform: translateY(0); }
+  67% { transform: translateY(-8px); }
+  75% { transform: translateY(-10px); }
+  87% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.fa-chess-knight {
+  animation-duration: 1s;
+  color: lightsalmon;
+}
+
+.shake {
+  animation-name: shake;
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.fa-chess-bishop {
+  animation-duration: 1s;
+  color: palevioletred;
+}
+.rotate {
+  animation-name: rotate;
+}
+@keyframes rotate {
+  100% { transform:rotate(-360deg); }
+}
+
+.fa-chess-king {
+  animation-duration: 0.5s;
+  color:rgb(107, 206, 107);
+}
+.flip {
+  animation-name: flip;
+}
+@keyframes flip {
+  100% { transform: rotateY(180deg); }
+}
+
+.fa-chess-queen {
+  animation-duration: 0.5s;
+  color: plum;
+}
+
+.glow {
+  animation: glow 1000ms;
+}
+@keyframes glow {
+  50%, 100% { text-shadow: 0 0 0 purple; }
+  75% { text-shadow: 0 0 12px purple; }
+}
+
+.fa-chess-rook {
+  animation-duration: 0.5s;
+  color: #e6e65c;
+}
+.squash {
+  animation-name: squash;
+}
+@keyframes squash {
+  0% { -webkit-transform: translateY(-10px) scaleY(1.2); }
+  35% { -webkit-transform: translateY(-10px) scaleY(1.2); } /* Same position as 0% */
+  65% { -webkit-transform: translateY(0px) scaleY(1.2); }    /* Starts moving after 35% to this position */
+  67% { -webkit-transform: translateY(4px) scaleY(0.8); }
+  85% { -webkit-transform: translateY(-6px) scaleY(1.2); }
+  100% { -webkit-transform: translateY(0px); }
+}
+
+/* .logo {
+  background-image: url(src/images/suprita-gg.png);
+  margin-top: 45px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  opacity: 0.8;
+} */
+
+.close {
+  -webkit-text-stroke: 1px black;
+  /* color: #57a0d2; */
+  /* animation: nervous linear 40ms infinite alternate; */
+}
+/* @keyframes nervous {
+  0% { transform: translateX(1px) }
+  100% { transform: translateX(-1px) }
+} */
+
+.fas:hover {
+  color: #57a0d2;
+  animation: grow linear 1000ms infinite alternate;
+}
+@keyframes grow {
+  0% { transform: scale(1); }
+  50% { transform: scale(2) rotate(0.5turn); }
+  100% { transform: scale(1) rotate(1turn); }
+}

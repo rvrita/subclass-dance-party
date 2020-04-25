@@ -1,0 +1,290 @@
+body, html{
+  height:100%;
+}
+body{
+  margin: 0px;
+  background-image: url(../images/bg.jpg);
+  background-position: center;
+	background-size: cover;
+  font-size: 17px;
+  font-family: cursive, Georgia, serif;
+}
+body, a{
+  color: rgb(202, 198, 198);
+  text-decoration: none;
+}
+
+a:hover {
+  border: 1px solid white;
+  background-color: rgb(180, 119, 5);
+  color: white;
+  text-decoration: none;
+  margin-top: 2px;
+}
+
+.title, .addDancerButton, .lineup, .clear, .boardLineUp{
+  padding:9px 9px;
+  float:right;
+}
+
+.topbar{
+  height:45px;
+  background-color:rgb(37, 24, 18);
+}
+
+.title{
+  background-color:rgba(121, 98, 88, 0.4);
+  color: rgb(165, 161, 161);
+}
+
+.container {
+  margin-top: 35px;
+}
+
+#btn-swap-classic, #btn-swap-wooden {
+  margin-top: 6px;
+  margin-left: 20px;
+  padding: 7px;
+  border: 2px solid white;
+  background-color: rgb(211, 111, 5);
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+  outline: none;
+  font-family: cursive, Georgia, serif;
+  text-transform: uppercase;
+}
+
+#btn-swap-classic:hover, #btn-swap-wooden:hover {
+  margin-top: 6px;
+  margin-left: 20px;
+  border: 2px dotted white;
+  background-color: rgb(102, 39, 131);
+  color: white;
+  text-decoration: none;
+}
+
+.dancer{
+  border:13px solid rgb(134, 57, 243);
+  border-radius:15px;
+  position:absolute;
+}
+
+.blinker {
+  position: absolute;
+  border: 0px;
+  width: 25px;
+  height: 25px;
+  background:
+      radial-gradient(circle at 50% 0,
+        rgba(255,0,0,.5),
+        rgba(255,0,0,0) 70.71%),
+      radial-gradient(circle at 6.7% 75%,
+        rgba(0,0,255,.5),
+        rgba(0,0,255,0) 70.71%),
+      radial-gradient(circle at 93.3% 75%,
+        rgba(0,255,0,.5),
+        rgba(0,255,0,0) 70.71%) beige;
+  border-radius: 50%;
+  animation: fadeout 1s infinite;
+}
+
+@keyframes fadeout {
+  0% {
+    transform: scale(1.0);
+    opacity: 1.0;
+  }
+  70% {
+    transform: scale(1.0);
+    opacity: 0.0;
+  }
+  100% {
+    transform: scale(0.0);
+    opacity: 1.0
+  }
+}
+
+.black {
+  background:rgba(18, 71, 7, 0.6);
+  width:30px;
+  height:30px;
+}
+
+.white {
+  background-color:rgba(252, 237, 37, 0.4);
+  width:30px;
+  height:30px;
+}
+
+.fas {
+  width:30px;
+  height:30px;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  transition: top 100ms, left 100ms;
+  font-size: 30px;
+}
+
+.chessboard, .logo {
+  position: relative;
+  width: 480px;
+  margin: 0 auto;
+}
+
+.chessboard table {
+  border-spacing: 0;
+}
+
+.chessboard td {
+  padding: 0;
+}
+
+.fa-chess-pawn {
+  animation-duration: 0.5s;
+  color: rgb(252, 30, 30);
+}
+
+.bounce {
+  animation-name: bounce;
+}
+
+@keyframes bounce {
+  50% { transform: translateY(0); }
+  67% { transform: translateY(-8px); }
+  75% { transform: translateY(-10px); }
+  87% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.fa-chess-knight {
+  animation-duration: 1s;
+  color: rgba(128, 248, 240, 0.9);
+}
+
+.shake {
+  animation-name: shake;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+
+.fa-chess-bishop {
+  animation-duration: 0.5s;
+  color: rgba(244, 248, 250, 0.8);
+}
+
+.rotate {
+  animation-name: rotate;
+}
+
+@keyframes rotate {
+  100% { transform:rotate(-360deg); }
+}
+
+.fa-chess-king {
+  animation-duration: 0.5s;
+  color: rgb(252, 244, 20);
+}
+
+.flip {
+  animation-name: flip;
+}
+
+@keyframes flip {
+  100% { transform: rotateY(180deg); }
+}
+
+.fa-chess-queen {
+  animation-duration: 0.5s;
+  color: rgb(247, 125, 247);
+}
+
+.glow {
+  animation: glow 1000ms ease-in-out;
+}
+
+@keyframes glow {
+  50%, 100% { text-shadow: 0 0 0 purple; }
+  75% { text-shadow: 0 0 12px rgb(219, 240, 104); }
+}
+
+.fa-chess-rook {
+  animation-duration: 0.5s;
+  color: rgb(6, 211, 23);
+}
+
+.squash {
+  animation-name: squash;
+}
+
+@keyframes squash {
+  0% { -webkit-transform: translateY(-10px) scaleY(1.2); }
+  35% { -webkit-transform: translateY(-10px) scaleY(1.2); } /* Same position as 0% */
+  65% { -webkit-transform: translateY(0px) scaleY(1.2); }    /* Starts moving after 35% to this position */
+  67% { -webkit-transform: translateY(3px) scaleY(0.5); }
+  85% { -webkit-transform: translateY(-6px) scaleY(1.2); }
+  100% { -webkit-transform: translateY(0px); }
+}
+
+.logo {
+  background-image: url(../images/suprita.png);
+  margin-top: 45px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.red, .blue, .green, .yellow, .orange {
+  border:18px double;
+  border-radius: 50%;
+  position: absolute;;
+  border-image: radial-gradient(circle, rgba(238,244,13,1) 4%, rgba(195,158,34,1) 21%, rgba(187,185,34,1) 31%, rgba(181,195,34,1) 39%, rgba(192,41,178,1) 64%, rgba(234,44,246,1) 66%, rgba(22,214,186,1) 81%, rgba(250,177,5,1) 83%, rgba(208,64,52,1) 100%);
+}
+
+audio {
+  display: none;
+}
+
+/* hiding line-up menus */
+.lineup {
+  display: none;
+}
+
+/* adding the hover effect to every chess piece */
+.fas:hover {
+  color: #57a0d2;
+  animation: grow linear 1000ms infinite alternate;
+}
+@keyframes grow {
+  0% { transform: scale(1); }
+  50% { transform: scale(2) rotate(0.5turn); }
+  100% { transform: scale(1) rotate(1turn); }
+}
+
+.close {
+  -webkit-text-stroke: 1.25px rgb(53, 51, 51);
+  /* color: #57a0d2; */
+  /* animation: nervous linear 40ms infinite alternate; */
+}
+/* @keyframes nervous {
+  0% { transform: translateX(1px) }
+  100% { transform: translateX(-1px) }
+} */
