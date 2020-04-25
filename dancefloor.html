@@ -1,16 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Object Dance Party</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script src="lib/jquery.js"></script>
-    <script src="src/dancer.js"></script>
-    <script src="src/blinkyDancer.js"></script>
-  </head>
-  <body>
-    <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-type="BlinkyDancer">add a blinky dancer</a>    </div>
-    <script src="src/init.js"></script>
-  </body>
+
+<head>
+  <title>Chess Party</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="src/css/jquery.vnm.confettiButton.css" />
+  <link id="pagecss" rel="alt stylesheet" type="text/css" href="src/css/ritaStyle.css" title="alternate"/>
+  <script type="text/javascript">
+    function swapCSS(sheet) {
+      document.getElementById('pagecss').setAttribute('href', sheet);
+    }
+
+    var classicClicks = 0;
+    function audioPlayer(url) {
+      var audio = new Audio();
+      if (classicClicks === 0) {
+        audio.src = url;
+        audio.loop = true;
+        audio.play();
+        classicClicks++;
+      }
+    }
+  </script>
+
+  <script src="lib/jquery.js"></script>
+  <script src="src/js/dancer.js"></script>
+  <script src="src/js/pawnDancer.js"></script>
+  <script src="src/js/knightDancer.js"></script>
+  <script src="src/js/bishopDancer.js"></script>
+  <script src="src/js/kingDancer.js"></script>
+  <script src="src/js/rookDancer.js"></script>
+  <script src="src/js/queenDancer.js"></script>
+  <script src="src/js/lineup.js"></script>
+  <script src="src/js/blinkyDancer.js"></script>
+  <script src="src/js/flashDancer.js"></script>
+</head>
+
+<body>
+  <audio class="audio" src="src/audio/maestro.mp3"></audio>
+  <div class="topbar">
+    <button id="btn-swap-classic" class="classic" onclick="swapCSS('src/css/ritaStyle.css'); ">Classic</button>
+    <button id="btn-swap-wooden" class="wooden" onclick="swapCSS('src/css/styles.css'); audioPlayer('src/audio/maestro.mp3')">Party</button>
+    <span class="title"><em>Chess Party</em></span>
+    <a href="#" class="addDancerButton blinky" data-dancer-type="BlinkyDancer">+Blinky</a>
+    <a href="#" class="addDancerButton flash" data-dancer-type="FlashDancer">+Flashy</a>
+    <a href="#" class="addDancerButton" data-dancer-type="PawnDancer">+Pawn</a>
+    <a href="#" class="addDancerButton" data-dancer-type="RookDancer">+Rook</a>
+    <a href="#" class="addDancerButton" data-dancer-type="KnightDancer">+Knight</a>
+    <a href="#" class="addDancerButton" data-dancer-type="BishopDancer">+Bishop</a>
+    <a href="#" class="addDancerButton" data-dancer-type="QueenDancer">+Queen</a>
+    <a href="#" class="addDancerButton" data-dancer-type="KingDancer">+King</a>
+    <a href="#" class="lineup">Line-Up</a>
+    <a href="#" class="boardLineUp">Animate</a>
+    <a href="#" class="clear">Clear</a>
+  </div>
+
+  <div class="container" id="confetti">
+    <div class="chessboard"></div>
+  </div>
+  <div class="footer"><div class="logo"></div></div>
+  <script src="src/js/init.js"></script>
+  <script src="src/js/jquery.vnm.confettiButton.min.js"></script>
+</body>
+
 </html>
