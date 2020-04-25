@@ -81,7 +81,7 @@ $(document).ready(function() {
 
   });
 
-  $('.pair').on('click', function(event) {
+/*   $('.pair').on('click', function(event) {
     var queen = new QueenDancer();
     queen.$inner.addClass('queendance');
     queen.boardLineUp();
@@ -207,7 +207,7 @@ $(document).ready(function() {
       bishop.repositionB('.fa-chess-bishop', BishopDancer);
     });
 
-  });
+  }); */
 
 
   $('.clear').on('click', function(event) {
